@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineStream - Movie Discovery Platform</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="animated-bg">
+        <div class="bg-animation"></div>
+        <div class="floating-elements">
+            <div class="floating-element"></div>
+            <div class="floating-element"></div>
+            <div class="floating-element"></div>
+            <div class="floating-element"></div>
+            <div class="floating-element"></div>
+        </div>
+    </div>
+
+    <!-- Theme Toggle -->
+    <input type="checkbox" id="theme-toggle" class="theme-toggle">
+    
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-film"></i>
+                <span>CineStream</span>
+            </div>
+            
+            <input type="checkbox" id="hamburger-toggle" class="hamburger-toggle">
+            <label for="hamburger-toggle" class="hamburger">
+                <span></span><span></span><span></span>
+            </label>
+            
+            <ul class="nav-menu">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#trending">Trending</a></li>
+                <li><a href="#popular">Shows</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#footer">Contact</a></li>
+                <li>
+                    <label for="theme-toggle" class="theme-switch">
+                        <i class="fas fa-moon"></i>
+                        <i class="fas fa-sun"></i>
+                    </label>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-bg-overlay"></div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="fade-in-up">Welcome to <span class="brand">CineStream</span></h1>
+                <p class="hero-subtitle fade-in-up delay-1">Discover, Stream, and Experience the Magic of Cinema</p>
+                <p class="hero-description fade-in-up delay-2">Your ultimate destination for trending movies, popular shows, and personalized recommendations.</p>
+                <a href="#trending" class="cta-button fade-in-up delay-3">
+                    <i class="fas fa-play"></i>
+                    Explore Trending Movies
+                    <div class="button-glow"></div>
+                </a>
+            </div>
+            <div class="hero-image fade-in-right">
+                <svg class="animated-svg" viewBox="0 0 400 400">
+                    <defs>
+                        <linearGradient id="filmGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#e50914;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#f40612;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <circle class="reel-outer" cx="200" cy="200" r="150" fill="none" stroke="url(#filmGradient)" stroke-width="8"/>
+                    <circle class="reel-inner" cx="200" cy="200" r="100" fill="none" stroke="url(#filmGradient)" stroke-width="4"/>
+                    <circle class="reel-center" cx="200" cy="200" r="20" fill="url(#filmGradient)"/>
+                    <g class="film-strip">
+                        <rect x="50" y="180" width="300" height="40" fill="url(#filmGradient)" opacity="0.8"/>
+                        <rect x="60" y="185" width="280" height="10" fill="white" stroke="white" stroke-width="20" stroke-dasharray="20 10"/>
+                        <rect x="60" y="205" width="280" height="10" fill="white" stroke="white" stroke-width="20" stroke-dasharray="20 10"/>
+                    </g>
+                    <g class="sparkles">
+                        <circle class="sparkle" cx="100" cy="100" r="3" fill="#ffd700"/>
+                        <circle class="sparkle" cx="320" cy="120" r="2" fill="#ffd700"/>
+                        <circle class="sparkle" cx="80" cy="300" r="2.5" fill="#ffd700"/>
+                        <circle class="sparkle" cx="350" cy="280" r="2" fill="#ffd700"/>
+                    </g>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trending Movies Section -->
+    <section id="trending" class="trending">
+        <div class="section-bg"></div>
+        <div class="container">
+            <div class="section-header fade-in-up">
+                <h2>Trending Movies</h2>
+                <p>Discover the hottest movies everyone's talking about</p>
+            </div>
+            <div class="content-grid">
+                <div class="content-card movie-card fade-in-up" data-delay="0">
+                    <div class="content-image">
+                        <img src="https://image.tmdb.org/t/p/w500/1E5baAaEse26fej7uHcjOgEE2t2.jpg" 
+                             alt="Barbie" 
+                             loading="lazy"
+                             onerror="this.src='https://via.placeholder.com/300x450/e50914/ffffff?text=BARBIE'">
+                        <div class="duration">1h 54m</div>
+                        <div class="content-overlay">
+                            <button class="watch-btn pulse"><i class="fas fa-play"></i>Watch Now</button>
+                            <button class="watchlist-btn bounce"><i class="fas fa-plus"></i></button>
+                        </div>
+                        <div class="card-glow"></div>
+                    </div>
+                    <div class="content-info">
+                        <h3>Barbie</h3>
+                        <p>Barbie and Ken are having the time of their lives in the colorful and seemingly perfect world of Barbie Land.</p>
+                    </div>
+                </div>
+
+                <div class="content-card movie-card fade-in-up" data-delay="100">
+                    <div class="content-image">
+                        <img src="https://image.tmdb.org/t/p/w500/8Gxv8gSFCU0XGDykEGv7zR1n2ua.jpg" 
+                             alt="Oppenheimer" 
+                             loading="lazy"
+                             onerror="this.src='https://via.placeholder.com/300x450/1a1a1a/ffffff?text=OPPENHEIMER'">
+                        <div class="duration">3h 0m</div>
+                        <div class="content-overlay">
+                            <button class="watch-btn pulse"><i class="fas fa-play"></i>Watch Now</button>
+                            <button class="watchlist-btn bounce"><i class="fas fa-plus"></i></button>
+                        </div>
+                        <div class="card-glow"></div>
+                    </div>
+                    <div class="content-info">
+                        <h3>Oppenheimer</h3>
+                        <p>The story of American scientist J. Robert Oppenheimer and his role in the development of the atomic bomb.</p>
+                    </div>
+                </div>
+
+                <div class="content-card movie-card fade-in-up" data-delay="200">
+                    <div class="content-image">
+                        <img src="https://image.tmdb.org/t/p/w500/8Vt6mWEReuy4Of61Lnj5Xj704m8.jpg" 
+                             alt="Spider-Man: Across the Spider-Verse" 
+                             loading="lazy"
+                             onerror="this.src='https://via.placeholder.com/300x450/e50914/ffffff?text=SPIDER-VERSE'">
+                        <div class="duration">2h 20m</div>
+                        <div class="content-overlay">
+                            <button class="watch-btn pulse"><i class="fas fa-play"></i>Watch Now</button>
+                            <button class="watchlist-btn bounce"><i class="fas fa-plus"></i></button>
+                        </div>
+                        <div class="card-glow"></div>
+                    </div>
+                    <div class="content-info">
+                        <h3>Spider-Man: Across the Spider-Verse</h3>
+                        <p>Miles Morales catapults across the Multiverse, where he encounters a team of Spider-People.</p>
+                    </div>
+                </div>
+
+                <div class="content-card movie-card fade-in-up" data-delay="300">
+                    <div class="content-image">
+                        <img src="https://image.tmdb.org/t/p/w500/74xTEgt7R36Fpooo50r9T25onhq.jpg" 
+                             alt="The Batman" 
+                             loading="lazy"
+                             onerror="this.src='https://via.placeholder.com/300x450/1a1a1a/ffffff?text=THE+BATMAN'">
+                        <div class="duration">2h 56m</div>
+                        <div class="content-overlay">
+                            <button class="watch-btn pulse"><i class="fas fa-play"></i>Watch Now</button>
+                            <button class="watchlist-btn bounce"><i class="fas fa-plus"></i></button>
+                        </div>
+                        <div class="card-glow"></div>
+                    </div>
+                    <div class="content-info">
+                        <h3>The Batman</h3>
+                        <p>Batman ventures into Gotham City's underworld when a sadistic killer leaves behind cryptic clues.</p>
+                    </div>
+                </div>
+
+                <div class="content-card movie-card fade-in-up" data-delay="400">
+                    <div class="content-image">
+                        <img src="https://image.tmdb.org/t/p/w500/62HCnUTziyWcpDaBO2i1DX17ljH.jpg" 
+                             alt="Top Gun: Maverick" 
+                             loading="lazy"
+                             onerror="this.src='https://via.placeholder.com/300x450/e50914/ffffff?text=TOP+GUN'">
+                        <div class="duration">2h 11m</div>
+                        <div class="content-overlay">
+                            <button class="watch-btn pulse"><i class="fas fa-play"></i>Watch Now</button>
+                            <button class="watchlist-btn bounce"><i class="fas fa-plus"></i></button>
+                        </div>
+                        <div class="card-glow"></div>
+                    </div>
+                    <div class="content-info">
+                        <h3>Top Gun: Maverick</h3>
+                        <p>After thirty years, Maverick is still pushing the envelope as a top naval aviator, training a new generation.</p>
+                    </div>
+                </div>
+
+                <div class="content-card movie-card fade-in-up" data-delay="500">
+                    <div class="content-image">
+                        <img src="https://image.tmdb.org/t/p/w500/t6HIqrRAclMCA60NsSmeqe9RmNV.jpg" 
+                             alt="Avatar: The Way of Water" 
+                             loading="lazy"
+                             onerror="this.src='https://via.placeholder.com/300x450/1a1a1a/ffffff?text=AVATAR+2'">
+                        <div class="duration">3h 12m</div>
+                        <div class="content-overlay">
+                            <button class="watch-btn pulse"><i class="fas fa-play"></i>Watch Now</button>
+                            <button class="watchlist-btn bounce"><i class="fas fa-plus"></i></button>
+                        </div>
+                        <div class="card-glow"></div>
+                    </div>
+                    <div class="content-info">
+                        <h3>Avatar: The Way of Water</h3>
+                        <p>Jake Sully and Ney'tiri have formed a family and are doing everything to stay together.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Shows Section -->
+    <section id="popular" class="popular">
+        <div class="section-bg-alt"></div>
+        <div class="container">
+            <div class="section-header fade-in-up">
+                <h2>Popular Shows</h2>
+                <p>Binge-worthy series that will keep you hooked</p>
+            </div>
+            <div class="content-grid">
+                <div class="content-card show-card fade-in-up" data-delay="0">
+                    <div class="content-image">
+                        <img src="https://image.tmdb.org/t/p/w500/49WJfeN0moxb9IPfGn8AIqMGskD.jpg" 
+                             alt="Stranger Things" 
+                             loading="lazy"
+                             onerror="this.src='https://via.placeholder.com/300x450/e50914/ffffff?text=STRANGER+THINGS'">
+                        <div class="content-overlay">
+                            <input type="checkbox" id="modal1" class="modal-toggle">
+                            <label for="modal1" class="learn-more-btn glow-btn">Learn More</label>
+                            <div class="modal">
+                                <div class="modal-content">
+                                    <label for="modal1" class="modal-close">&times;</label>
+                                    <h3>Stranger Things</h3>
+                                    <p><strong>Genre:</strong> Sci-Fi, Horror, Drama</p>
+                                    <p><strong>Seasons:</strong> 4 | <strong>Episodes:</strong> 42</p>
+                                    <p>When a young boy disappears, his mother, a police chief and his friends must confront terrifying supernatural forces. Set in 1980s Indiana, paying homage to pop culture of that era.</p>
+                                    <button class="watch-now-modal"><i class="fas fa-play"></i>Watch Now</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-glow"></div>
+                    </div>
+                    <div class="content-info">
+                        <h3>Stranger Things</h3>
+                        <p class="genre">Sci-Fi, Horror</p>
+                        <p class="seasons">4 Seasons • 42 Episodes</p>
+                        <p>When a young boy disappears, his mother and friends must confront terrifying supernatural forces.</p>
+                    </div>
+                </div>
+
+                <div class="content-card show-card fade-in-up" data-delay="100">
+                    <div class="content-image">
+                        <img src="https://image.tmdb.org/t/p/w500/iHSwvRVsRyxpX7FE7GbviaDvgGZ.jpg" 
+                             alt="The Crown" 
+                             loading="lazy"
+                             onerror="this.src='https://via.placeholder.com/300x450/1a1a1a/ffffff?text=THE+CROWN'">
+                        <div class="content-overlay">
+                            <input type="checkbox" id="modal2" class="modal-toggle">
+                            <label for="modal2" class="learn-more-btn glow-btn">Learn More</label>
+                            <div class="modal">
+                                <div class="modal-content">
+                                    <label for="modal2" class="modal-close">&times;</label>
+                                    <h3>The Crown</h3>
+                                    <p><strong>Genre:</strong> Drama, Biography</p>
+                                    <p><strong>Seasons:</strong> 6 | <strong>Episodes:</strong> 60</p>
+                                    <p>Follows the political rivalries and romance of Queen Elizabeth II's reign and the events that shaped the second half of the twentieth century.</p>
+                                    <button class="watch-now-modal"><i class="fas fa-play"></i>Watch Now</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-glow"></div>
+                    </div>
+                    <div class="content-info">
+                        <h3>The Crown</h3>
+                        <p class="genre">Drama, Biography</p>
+                        <p class="seasons">6 Seasons • 60 Episodes</p>
+                        <p>Follows the political rivalries and romance of Queen Elizabeth II's reign.</p>
+                    </div>
+                </div>
+
+                <div class="content-card show-card fade-in-up" data-delay="200">
+                    <div class="content-image">
+                        <img src="https://image.tmdb.org/t/p/w500/9PFonBhy4cQy7Jz20NpMygczOkv.jpg" 
+                             alt="Wednesday" 
+                             loading="lazy"
+                             onerror="this.src='https://via.placeholder.com/300x450/e50914/ffffff?text=WEDNESDAY'">
+                        <div class="content-overlay">
+                            <input type="checkbox" id="modal3" class="modal-toggle">
+                            <label for="modal3" class="learn-more-btn glow-btn">Learn More</label>
+                            <div class="modal">
+                                <div class="modal-content">
+                                    <label for="modal3" class="modal-close">&times;</label>
+                                    <h3>Wednesday</h3>
+                                    <p><strong>Genre:</strong> Comedy, Horror, Mystery</p>
+                                    <p><strong>Seasons:</strong> 1 | <strong>Episodes:</strong> 8</p>
+                                    <p>Follows Wednesday Addams' years as a student at Nevermore Academy, where she attempts to master her emerging psychic ability.</p>
+                                    <button class="watch-now-modal"><i class="fas fa-play"></i>Watch Now</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-glow"></div>
+                    </div>
+                    <div class="content-info">
+                        <h3>Wednesday</h3>
+                        <p class="genre">Comedy, Horror</p>
+                        <p class="seasons">1 Season • 8 Episodes</p>
+                        <p>Wednesday Addams' years as a student at Nevermore Academy.</p>
+                    </div>
+                </div>
+
+                <div class="content-card show-card fade-in-up" data-delay="300">
+                    <div class="content-image">
+                        <img src="https://image.tmdb.org/t/p/w500/7QMsOTMUswlwxJP0rTTZfmz2tX2.jpg" 
+                             alt="House of the Dragon" 
+                             loading="lazy"
+                             onerror="this.src='https://via.placeholder.com/300x450/1a1a1a/ffffff?text=HOUSE+OF+DRAGON'">
+                        <div class="content-overlay">
+                            <input type="checkbox" id="modal4" class="modal-toggle">
+                            <label for="modal4" class="learn-more-btn glow-btn">Learn More</label>
+                            <div class="modal">
+                                <div class="modal-content">
+                                    <label for="modal4" class="modal-close">&times;</label>
+                                    <h3>House of the Dragon</h3>
+                                    <p><strong>Genre:</strong> Fantasy, Drama, Action</p>
+                                    <p><strong>Seasons:</strong> 2 | <strong>Episodes:</strong> 18</p>
+                                    <p>The story of the Targaryen civil war that took place about 300 years before events portrayed in Game of Thrones.</p>
+                                    <button class="watch-now-modal"><i class="fas fa-play"></i>Watch Now</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-glow"></div>
+                    </div>
+                    <div class="content-info">
+                        <h3>House of the Dragon</h3>
+                        <p class="genre">Fantasy, Drama</p>
+                        <p class="seasons">2 Seasons • 18 Episodes</p>
+                        <p>The story of the Targaryen civil war set 300 years before Game of Thrones.</p>
+                    </div>
+                </div>
+
+                <div class="content-card show-card fade-in-up" data-delay="400">
+                    <div class="content-image">
+                        <img src="https://image.tmdb.org/t/p/w500/ggFHVNu6YYI5L9pCfOacjizRGt.jpg" 
+                             alt="Breaking Bad" 
+                             loading="lazy"
+                             onerror="this.src='https://via.placeholder.com/300x450/e50914/ffffff?text=BREAKING+BAD'">
+                        <div class="content-overlay">
+                            <input type="checkbox" id="modal5" class="modal-toggle">
+                            <label for="modal5" class="learn-more-btn glow-btn">Learn More</label>
+                            <div class="modal">
+                                <div class="modal-content">
+                                    <label for="modal5" class="modal-close">&times;</label>
+                                    <h3>Breaking Bad</h3>
+                                    <p><strong>Genre:</strong> Crime, Drama, Thriller</p>
+                                    <p><strong>Seasons:</strong> 5 | <strong>Episodes:</strong> 62</p>
+                                    <p>A high school chemistry teacher diagnosed with inoperable lung cancer turns to manufacturing and selling methamphetamine.</p>
+                                    <button class="watch-now-modal"><i class="fas fa-play"></i>Watch Now</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-glow"></div>
+                    </div>
+                    <div class="content-info">
+                        <h3>Breaking Bad</h3>
+                        <p class="genre">Crime, Drama</p>
+                        <p class="seasons">5 Seasons • 62 Episodes</p>
+                        <p>A high school chemistry teacher turns to manufacturing methamphetamine.</p>
+                    </div>
+                </div>
+
+                <div class="content-card show-card fade-in-up" data-delay="500">
+                    <div class="content-image">
+                        <img src="https://image.tmdb.org/t/p/w500/cqlnWjFJ0nkiYvTuM6iyeNpBXeJ.jpg" 
+                             alt="The Witcher" 
+                             loading="lazy"
+                             onerror="this.src='https://via.placeholder.com/300x450/1a1a1a/ffffff?text=THE+WITCHER'">
+                        <div class="content-overlay">
+                            <input type="checkbox" id="modal6" class="modal-toggle">
+                            <label for="modal6" class="learn-more-btn glow-btn">Learn More</label>
+                            <div class="modal">
+                                <div class="modal-content">
+                                    <label for="modal6" class="modal-close">&times;</label>
+                                    <h3>The Witcher</h3>
+                                    <p><strong>Genre:</strong> Fantasy, Adventure, Drama</p>
+                                    <p><strong>Seasons:</strong> 3 | <strong>Episodes:</strong> 24</p>
+                                    <p>Geralt of Rivia, a solitary monster hunter, struggles to find his place in a world where people often prove more wicked than beasts.</p>
+                                    <button class="watch-now-modal"><i class="fas fa-play"></i>Watch Now</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-glow"></div>
+                    </div>
+                    <div class="content-info">
+                        <h3>The Witcher</h3>
+                        <p class="genre">Fantasy, Adventure</p>
+                        <p class="seasons">3 Seasons • 24 Episodes</p>
+                        <p>Geralt of Rivia, a solitary monster hunter, struggles to find his place in the world.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- User Reviews Section -->
+    <section id="reviews" class="reviews">
+        <div class="section-bg-reviews"></div>
+        <div class="container">
+            <div class="section-header fade-in-up">
+                <h2>User Reviews</h2>
+                <p>What our community is saying about their favorite content</p>
+            </div>
+            <div class="reviews-container">
+                <div class="reviews-display">
+                    <div class="review-card fade-in-left" data-delay="0">
+                        <div class="reviewer-info">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" 
+                                 alt="Sarah Johnson" 
+                                 class="reviewer-avatar"
+                                 onerror="this.src='https://via.placeholder.com/60x60/e50914/ffffff?text=SJ'">
+                            <div class="reviewer-details">
+                                <h4>Sarah Johnson</h4>
+                                <div class="rating">★★★★★</div>
+                            </div>
+                        </div>
+                        <p>"CineStream has completely transformed my movie-watching experience! The recommendations are spot-on, and I love discovering new content through their trending section. The interface is so intuitive!"</p>
+                    </div>
+
+                    <div class="review-card fade-in-left" data-delay="100">
+                        <div class="reviewer-info">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" 
+                                 alt="Mike Chen" 
+                                 class="reviewer-avatar"
+                                 onerror="this.src='https://via.placeholder.com/60x60/e50914/ffffff?text=MC'">
+                            <div class="reviewer-details">
+                                <h4>Mike Chen</h4>
+                                <div class="rating">★★★★★</div>
+                            </div>
+                        </div>
+                        <p>"The interface is incredibly user-friendly, and the variety of content is amazing. I've found so many hidden gems through this platform! The dark mode feature is a game-changer for late-night browsing."</p>
+                    </div>
+
+                    <div class="review-card fade-in-left" data-delay="200">
+                        <div class="reviewer-info">
+                            <img src="https://randomuser.me/api/portraits/women/68.jpg" 
+                                 alt="Emma Davis" 
+                                 class="reviewer-avatar"
+                                 onerror="this.src='https://via.placeholder.com/60x60/e50914/ffffff?text=ED'">
+                            <div class="reviewer-details">
+                                <h4>Emma Davis</h4>
+                                <div class="rating">★★★★☆</div>
+                            </div>
+                        </div>
+                        <p>"Great platform for movie enthusiasts! The watchlist feature is particularly useful, and the community reviews help me decide what to watch next. Love the responsive design too!"</p>
+                    </div>
+
+                    <div class="review-card fade-in-left" data-delay="300">
+                        <div class="reviewer-info">
+                            <img src="https://randomuser.me/api/portraits/men/75.jpg" 
+                                 alt="Alex Rodriguez" 
+                                 class="reviewer-avatar"
+                                 onerror="this.src='https://via.placeholder.com/60x60/e50914/ffffff?text=AR'">
+                            <div class="reviewer-details">
+                                <h4>Alex Rodriguez</h4>
+                                <div class="rating">★★★★★</div>
+                            </div>
+                        </div>
+                        <p>"As a film student, CineStream has become my go-to platform for discovering both mainstream and indie content. The detailed information and user reviews are incredibly helpful for my studies."</p>
+                    </div>
+
+                    <div class="review-card fade-in-left" data-delay="400">
+                        <div class="reviewer-info">
+                            <img src="https://randomuser.me/api/portraits/women/90.jpg" 
+                                 alt="Jessica Kim" 
+                                 class="reviewer-avatar"
+                                 onerror="this.src='https://via.placeholder.com/60x60/e50914/ffffff?text=JK'">
+                            <div class="reviewer-details">
+                                <h4>Jessica Kim</h4>
+                                <div class="rating">★★★★★</div>
+                            </div>
+                        </div>
+                        <p>"The trending section always keeps me updated with the latest releases. I especially appreciate how the platform showcases both movies and TV shows in such an organized way. Highly recommended!"</p>
+                    </div>
+                </div>
+
+                <div class="review-form-container fade-in-right">
+                    <h3>Share Your Review</h3>
+                    <form class="review-form">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="rating">Rating</label>
+                            <select id="rating" name="rating" required>
+                                <option value="">Select Rating</option>
+                                <option value="5">★★★★★ (5 stars)</option>
+                                <option value="4">★★★★☆ (4 stars)</option>
+                                <option value="3">★★★☆☆ (3 stars)</option>
+                                <option value="2">★★☆☆☆ (2 stars)</option>
+                                <option value="1">★☆☆☆☆ (1 star)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="review">Your Review</label>
+                            <textarea id="review" name="review" rows="4" placeholder="Share your thoughts about CineStream..." required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn glow-btn">
+                            <i class="fas fa-paper-plane"></i>Submit Review
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer" class="footer">
+        <div class="footer-bg"></div>
+        <div class="container">
+            <div class="footer-content fade-in-up">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-film"></i>
+                        <span>CineStream</span>
+                    </div>
+                    <p>Your ultimate destination for discovering and streaming the best movies and TV shows worldwide.</p>
+                    <div class="social-icons">
+                        <a href="https://facebook.com" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="https://instagram.com" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="https://youtube.com" target="_blank" class="social-icon"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#trending">Trending Movies</a></li>
+                        <li><a href="#popular">Popular Shows</a></li>
+                        <li><a href="#reviews">User Reviews</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="https://example.com/terms" target="_blank">Terms & Conditions</a></li>
+                        <li><a href="https://example.com/privacy" target="_blank">Privacy Policy</a></li>
+                        <li><a href="https://example.com/cookies" target="_blank">Cookie Policy</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="https://example.com/help" target="_blank">Help Center</a></li>
+                        <li><a href="https://example.com/contact" target="_blank">Contact Us</a></li>
+                        <li><a href="https://example.com/faq" target="_blank">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 CineStream. All rights reserved. Made with ❤️ for movie lovers</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#hero" class="back-to-top">
+        <i class="fas fa-chevron-up"></i>
+        <div class="ripple"></div>
+    </a>
+
+    <script>
+        // Enhanced Image Loading with Multiple Fallbacks
+        document.addEventListener('DOMContentLoaded', function() {
+            const images = document.querySelectorAll('img[data-src], img[src]');
+            
+            images.forEach(img => {
+                img.addEventListener('error', function() {
+                    // First fallback: Try a different image source
+                    if (!this.dataset.fallbackAttempted) {
+                        this.dataset.fallbackAttempted = 'true';
+                        
+                        // Get the alt text for fallback
+                        const altText = this.alt || 'Movie Poster';
+                        const encodedText = encodeURIComponent(altText.toUpperCase());
+                        
+                        // Create a better fallback URL
+                        this.src = `https://via.placeholder.com/300x450/e50914/ffffff?text=${encodedText}`;
+                    }
+                });
+            });
+
+            // Scroll animations
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const delay = entry.target.dataset.delay || 0;
+                        setTimeout(() => {
+                            entry.target.classList.add('animate');
+                        }, delay);
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            // Observe all animated elements
+            document.querySelectorAll('[data-delay]').forEach(el => {
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>
